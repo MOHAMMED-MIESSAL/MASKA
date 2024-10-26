@@ -53,15 +53,15 @@ public class Member {
 
     @Override
     public String toString() {
-        return "Member{" +
-                "id=" + id +
-                ", membershipNumber='" + membershipNumber + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", identificationDocument='" + identificationDocument + '\'' +
-                ", nationality='" + nationality + '\'' +
-                ", membershipDate=" + membershipDate +
-                ", licenseExpirationDate=" + licenseExpirationDate +
+        return "Member{ " +
+                "id= " + id +
+                ", membershipNumber=' " + membershipNumber + '\'' +
+                ", lastName=' " + lastName + '\'' +
+                ", firstName=' " + firstName + '\'' +
+                ", identificationDocument=' " + identificationDocument + '\'' +
+                ", nationality=' " + nationality + '\'' +
+                ", membershipDate= " + membershipDate +
+                ", licenseExpirationDate= " + licenseExpirationDate +
                 '}';
     }
 }

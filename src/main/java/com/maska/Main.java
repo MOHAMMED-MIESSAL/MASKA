@@ -5,7 +5,6 @@ import com.maska.model.Member;
 import com.maska.service.MemberService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public class Main {
@@ -16,28 +15,28 @@ public class Main {
         // Obtenir le bean MemberService
         MemberService memberService = context.getBean(MemberService.class);
 
- //         Créer un nouvel objet Member
-        Member member = new Member();
-        member.setMembershipNumber("M123456");
-        member.setLastName("Doe");
-        member.setFirstName("John");
-        member.setIdentificationDocument("ID123456789");
-        member.setNationality("French");
-        member.setMembershipDate(LocalDate.now());
-        member.setLicenseExpirationDate(LocalDate.now().plusYears(1));
-
-        // Sauvegarder le membre dans la base de données
-        memberService.create(member);
+//        // Créer un nouvel objet Member
+//        Member member = new Member();
+//        member.setMembershipNumber("M123456");
+//        member.setLastName("Doe");
+//        member.setFirstName("John");
+//        member.setIdentificationDocument("ID123456789");
+//        member.setNationality("French");
+//        member.setMembershipDate(LocalDate.now());
+//        member.setLicenseExpirationDate(LocalDate.now().plusYears(1));
+//
+//        // Sauvegarder le membre dans la base de données
+//         Member result =   memberService.create(member);
 
 //        // Récupérer le membre par ID
 //        Member member = memberService.findById(1L);
 
 //        // Récupérer et afficher tous les membres
-//        List<Member> members = memberService.findAll();
-
+        List<Member> members = memberService.findAll();
+        System.out.println("All members: \n" + members);
 //        // Mettre à jour le membre
 //        Member member = memberService.findById(1L);
-//
+
 //        member.setMembershipNumber("BB212895");
 //        member.setLastName("Mohammed");
 //        member.setFirstName("Miessal");
@@ -50,13 +49,12 @@ public class Main {
 
 
         // Afficher les détails du membre
-//        System.out.println("Member saved successfully!");
+        // System.out.println("Member saved successfully!");
 
-        System.out.println(member);
+//        System.out.println(result);
 
         // Fermer le contexte
         context.close();
-
 
 
 //        // Récupérer et afficher tous les membres
